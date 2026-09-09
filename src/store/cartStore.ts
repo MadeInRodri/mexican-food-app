@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
+import { Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export interface CartItem {
@@ -34,7 +35,17 @@ export const useCartStore = create<CartState>()(
       addItem: (item) =>
         set((state) => {
           const existing = state.activeOrder.find((i) => i.id === item.id);
+
           if (existing) {
+            if (existing.quantity >= 20) {
+              Alert.alert(
+                "Límite alcanzado",
+                `No puedes llevar más de 20 unidades de ${item.title}. ¡Deja para los demás!`,
+              );
+
+              return state;
+            }
+
             return {
               activeOrder: state.activeOrder.map((i) =>
                 i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
