@@ -156,6 +156,7 @@ export default function MenuScreen() {
               <Pressable
                 onPress={() => {
                   setIsCartOpen(false);
+                  useCartStore.getState().checkout();
                   router.push("/checkout" as any);
                 }}
                 className="w-full bg-green-500 active:bg-green-600 rounded-xl py-4 items-center justify-center"
