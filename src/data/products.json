@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Tacos al Pastor",
+    "description": "Orden de 3 tacos de cerdo marinado con piña",
+    "price": 3.5,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Tacos+Pastor"
+  },
+  {
+    "id": 2,
+    "title": "Tacos de Birria",
+    "description": "Orden de 3 tacos con queso y consomé",
+    "price": 4.25,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Birria"
+  },
+  {
+    "id": 3,
+    "title": "Burrito de Asada",
+    "description": "Tortilla de harina con carne asada, frijoles y arroz",
+    "price": 5.5,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Burrito"
+  },
+  {
+    "id": 4,
+    "title": "Quesadilla Sincronizada",
+    "description": "Doble tortilla de harina con queso y jamón",
+    "price": 2.75,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Quesadilla"
+  },
+  {
+    "id": 5,
+    "title": "Enchiladas Verdes",
+    "description": "3 tortillas rellenas de pollo bañadas en salsa verde",
+    "price": 6.0,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Enchiladas"
+  },
+  {
+    "id": 6,
+    "title": "Chilaquiles Rojos",
+    "description": "Totopos bañados en salsa roja con huevo estrellado",
+    "price": 5.0,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Chilaquiles"
+  },
+  {
+    "id": 7,
+    "title": "Guacamole con Totopos",
+    "description": "Aguacate fresco preparado con pico de gallo",
+    "price": 3.25,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Guacamole"
+  },
+  {
+    "id": 8,
+    "title": "Torta Cubana",
+    "description": "Bolillo con pierna, jamón, salchicha, queso y aguacate",
+    "price": 6.5,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Torta"
+  },
+  {
+    "id": 9,
+    "title": "Sopa Azteca",
+    "description": "Sopa de tortilla con aguacate, queso y crema",
+    "price": 4.5,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Sopa+Azteca"
+  },
+  {
+    "id": 10,
+    "title": "Esquite Clásico",
+    "description": "Elote en vaso con mayonesa, queso y chile",
+    "price": 2.5,
+    "category": "Alimentos",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Esquite"
+  },
+  {
+    "id": 11,
+    "title": "Agua de Horchata",
+    "description": "Bebida refrescante de arroz y canela",
+    "price": 2.0,
+    "category": "Bebidas",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Horchata"
+  },
+  {
+    "id": 12,
+    "title": "Agua de Jamaica",
+    "description": "Infusión fría de flor de jamaica",
+    "price": 2.0,
+    "category": "Bebidas",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Jamaica"
+  },
+  {
+    "id": 13,
+    "title": "Refresco Mexicano",
+    "description": "Soda de mandarina en botella de vidrio",
+    "price": 1.75,
+    "category": "Bebidas",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Refresco"
+  },
+  {
+    "id": 14,
+    "title": "Margarita Clásica",
+    "description": "Coctel helado de limón con borde escarchado",
+    "price": 5.0,
+    "category": "Bebidas",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Margarita"
+  },
+  {
+    "id": 15,
+    "title": "Cerveza Clara",
+    "description": "Cerveza de barril bien fría",
+    "price": 3.0,
+    "category": "Bebidas",
+    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Cerveza"
+  }
+]
