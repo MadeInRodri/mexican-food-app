@@ -12,27 +12,23 @@ export default function RootLayout() {
   useEffect(() => {
     setTimeout(() => setIsReady(true), 100);
   }, []);
-
   useEffect(() => {
     if (!isReady) return;
     const inAuthGroup = segments[0] === "(auth)";
-
-    if (!isLogged && !inAuthGroup) {
-      router.replace("/(auth)/login" as any);
-    } else if (isLogged && inAuthGroup) {
-      router.replace("/(tabs)" as any);
-    }
+    if (!isLogged && !inAuthGroup) router.replace("/(auth)/login" as any);
+    else if (isLogged && inAuthGroup) router.replace("/(tabs)" as any);
   }, [isLogged, segments, isReady]);
 
   return (
     <Stack
       screenOptions={{
         headerShown: false,
-        contentStyle: { backgroundColor: "#fff7ed" }, // bg-orange-50
+        contentStyle: { backgroundColor: "#fff7ed" },
       }}
     >
       <Stack.Screen name="(auth)" />
       <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="checkout" options={{ presentation: "modal" }} />
     </Stack>
   );
 }

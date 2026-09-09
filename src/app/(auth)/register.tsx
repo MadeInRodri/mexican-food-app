@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Pressable } from "react-native";
+import { View, Text, TextInput, Pressable, Alert } from "react-native";
 import { router, Link } from "expo-router";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useForm, Controller } from "react-hook-form";
+import { useAuthStore } from "@/store/authStore";
 
 type FormData = {
   username: string;
@@ -21,11 +22,22 @@ export default function RegisterScreen() {
   });
   const [focusedInput, setFocusedInput] = useState<string | null>(null);
 
+  // Extraemos la acción de registro del store
+  const registerAction = useAuthStore((state) => state.register);
+
   const onSubmit = (data: FormData) => {
-    console.log("Datos de registro:", data);
-    reset();
-    // TODO: Guardar usuario localmente
-    router.replace("/(auth)/login" as any);
+    const success = registerAction({
+      nombre: data.username,
+      email: data.email,
+      password: data.password,
+    });
+
+    if (success) {
+      reset();
+      router.replace("/(auth)/login" as any);
+    } else {
+      Alert.alert("Error", "Este correo electrónico ya está registrado.");
+    }
   };
 
   return (
@@ -46,7 +58,7 @@ export default function RegisterScreen() {
         <View className="gap-4">
           <View>
             <Text className="text-xs font-bold text-gray-500 mb-1 ml-1 uppercase">
-              Nombre de usuario
+              Nombre
             </Text>
             <Controller
               control={control}
@@ -87,7 +99,7 @@ export default function RegisterScreen() {
 
           <View>
             <Text className="text-xs font-bold text-gray-500 mb-1 ml-1 uppercase">
-              Correo electrónico
+              Correo
             </Text>
             <Controller
               control={control}

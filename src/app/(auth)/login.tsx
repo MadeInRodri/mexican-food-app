@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Pressable } from "react-native";
+import { View, Text, TextInput, Pressable, Alert } from "react-native";
 import { Link } from "expo-router";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useForm, Controller } from "react-hook-form";
@@ -20,14 +20,21 @@ export default function LoginScreen() {
     defaultValues: { email: "", password: "" },
   });
 
-  const login = useAuthStore((state) => state.login);
+  const loginAction = useAuthStore((state) => state.login);
   const [focusedInput, setFocusedInput] = useState<string | null>(null);
 
   const onSubmit = (data: FormData) => {
-    console.log("¡Datos capturados con éxito!", data);
-    reset();
-    // TODO: Validar credenciales locales según el desafío
-    login({ nombre: "Cliente", email: data.email });
+    // Verificamos credenciales locales
+    const success = loginAction(data.email, data.password);
+
+    if (success) {
+      reset();
+    } else {
+      Alert.alert(
+        "Acceso denegado",
+        "El correo o la contraseña son incorrectos.",
+      );
+    }
   };
 
   return (
@@ -62,13 +69,7 @@ export default function LoginScreen() {
               }}
               render={({ field: { onChange, value } }) => (
                 <View
-                  className={`flex-row items-center bg-gray-50 border rounded-xl px-3 py-3 ${
-                    errors.email
-                      ? "border-red-500"
-                      : focusedInput === "email"
-                        ? "border-orange-500"
-                        : "border-gray-200"
-                  }`}
+                  className={`flex-row items-center bg-gray-50 border rounded-xl px-3 py-3 ${errors.email ? "border-red-500" : focusedInput === "email" ? "border-orange-500" : "border-gray-200"}`}
                 >
                   <MaterialIcons
                     name="mail-outline"
@@ -104,22 +105,10 @@ export default function LoginScreen() {
             <Controller
               control={control}
               name="password"
-              rules={{
-                required: "La contraseña es obligatoria",
-                minLength: {
-                  value: 6,
-                  message: "Debe tener al menos 6 caracteres",
-                },
-              }}
+              rules={{ required: "La contraseña es obligatoria" }}
               render={({ field: { onChange, value } }) => (
                 <View
-                  className={`flex-row items-center bg-gray-50 border rounded-xl px-3 py-3 ${
-                    errors.password
-                      ? "border-red-500"
-                      : focusedInput === "password"
-                        ? "border-orange-500"
-                        : "border-gray-200"
-                  }`}
+                  className={`flex-row items-center bg-gray-50 border rounded-xl px-3 py-3 ${errors.password ? "border-red-500" : focusedInput === "password" ? "border-orange-500" : "border-gray-200"}`}
                 >
                   <MaterialIcons
                     name="lock-outline"
