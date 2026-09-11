@@ -3,10 +3,18 @@ import { View, Text, ScrollView, Pressable } from "react-native";
 import { useRouter } from "expo-router";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useCartStore } from "@/store/cartStore";
+import { useAuthStore } from "@/store/authStore";
 
 export default function HistoryScreen() {
+  //Traemos la data del AsyncStorage
   const orderHistory = useCartStore((state) => state.orderHistory);
+  const currentUser = useAuthStore((state) => state.user);
   const router = useRouter();
+
+  //Filtro las órdenes para que solo salgan las del usuario actual
+  const userOrders = orderHistory.filter(
+    (order) => order.userEmail === currentUser?.email,
+  );
 
   return (
     <View className="flex-1 bg-orange-50 p-4">
@@ -14,7 +22,7 @@ export default function HistoryScreen() {
         Historial de Compras
       </Text>
 
-      {orderHistory.length === 0 ? (
+      {userOrders.length === 0 ? (
         <View className="flex-1 items-center justify-center">
           <MaterialIcons
             name="receipt-long"
@@ -31,7 +39,7 @@ export default function HistoryScreen() {
         </View>
       ) : (
         <ScrollView showsVerticalScrollIndicator={false} className="mb-20">
-          {orderHistory.map((order) => {
+          {userOrders.map((order) => {
             const date = new Date(order.date).toLocaleDateString("es-ES", {
               day: "2-digit",
               month: "short",

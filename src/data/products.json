@@ -5,7 +5,7 @@
     "description": "Orden de 3 tacos de cerdo marinado con piña",
     "price": 3.5,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Tacos+Pastor"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989387/pastor_jexp0k.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Orden de 3 tacos con queso y consomé",
     "price": 4.25,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Birria"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989969/birria_ublark.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Tortilla de harina con carne asada, frijoles y arroz",
     "price": 5.5,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Burrito"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/burrito_kdrt31.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Doble tortilla de harina con queso y jamón",
     "price": 2.75,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Quesadilla"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989969/quesadilla_wrbu0q.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "3 tortillas rellenas de pollo bañadas en salsa verde",
     "price": 6.0,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Enchiladas"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/enchiladas_bcllil.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Totopos bañados en salsa roja con huevo estrellado",
     "price": 5.0,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Chilaquiles"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989968/chilaquiles_jwknad.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Aguacate fresco preparado con pico de gallo",
     "price": 3.25,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Guacamole"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/guacamole_of7rrg.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Bolillo con pierna, jamón, salchicha, queso y aguacate",
     "price": 6.5,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Torta"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/torta_qyfvqy.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "Sopa de tortilla con aguacate, queso y crema",
     "price": 4.5,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Sopa+Azteca"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/sopa_apwnve.jpg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "description": "Elote en vaso con mayonesa, queso y chile",
     "price": 2.5,
     "category": "Alimentos",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Esquite"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989968/esquite_xcyqng.jpg"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "description": "Bebida refrescante de arroz y canela",
     "price": 2.0,
     "category": "Bebidas",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Horchata"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/horchata_knbiic.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "description": "Infusión fría de flor de jamaica",
     "price": 2.0,
     "category": "Bebidas",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Jamaica"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/jamaica_xyeqss.jpg"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "description": "Soda de mandarina en botella de vidrio",
     "price": 1.75,
     "category": "Bebidas",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Refresco"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989966/jarrito_mrbf6c.jpg"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "description": "Coctel helado de limón con borde escarchado",
     "price": 5.0,
     "category": "Bebidas",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Margarita"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989966/margarita_q1zaq4.jpg"
   },
   {
     "id": 15,
@@ -117,6 +117,6 @@
     "description": "Cerveza de barril bien fría",
     "price": 3.0,
     "category": "Bebidas",
-    "urlImage": "https://via.placeholder.com/200/FF9F43/FFFFFF?text=Cerveza"
+    "urlImage": "https://res.cloudinary.com/diogirqun/image/upload/v1788989967/cerveza_z1sb54.jpg"
   }
 ]

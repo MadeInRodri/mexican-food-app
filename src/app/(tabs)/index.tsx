@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Alert } from "react-native";
 import { View, Text, ScrollView, Pressable, Image, Modal } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
@@ -26,7 +27,7 @@ export default function MenuScreen() {
 
   return (
     <View className="flex-1 bg-orange-50">
-      <ScrollView className="p-4 mb-20">
+      <ScrollView className="p-4 mb-10">
         {Object.entries(groupedProducts).map(([category, prods]) => (
           <View key={category} className="mb-8">
             <Text className="text-2xl font-extrabold text-gray-800 mb-4 border-b-2 border-orange-200 pb-2 self-start">
@@ -155,9 +156,27 @@ export default function MenuScreen() {
               </View>
               <Pressable
                 onPress={() => {
-                  setIsCartOpen(false);
-                  useCartStore.getState().checkout();
-                  router.push("/checkout" as any);
+                  Alert.alert(
+                    "Confirmar Orden",
+                    `¿Confirmar orden por $${total.toFixed(2)}?`,
+                    [
+                      {
+                        text: "Cancelar",
+                        style: "cancel",
+                      },
+                      {
+                        text: "Sí, confirmar",
+                        onPress: () => {
+                          const isValid = useCartStore.getState().checkout();
+
+                          if (isValid as any) {
+                            setIsCartOpen(false);
+                            router.push("/checkout" as any);
+                          }
+                        },
+                      },
+                    ],
+                  );
                 }}
                 className="w-full bg-green-500 active:bg-green-600 rounded-xl py-4 items-center justify-center"
               >
