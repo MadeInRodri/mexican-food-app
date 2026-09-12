@@ -33,7 +33,7 @@ App móvil diseñada para gestionar órdenes en un restaurante de comida mexican
 
 ## Video de Defensa
 
-https://youtu.be/08lRX9f5Z2E
+https://www.youtube.com/watch?v=2GFzP-rQMI0
 
 ---
 
